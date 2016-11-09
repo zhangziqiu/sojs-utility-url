@@ -1,0 +1,32 @@
+{
+  "name": "sojs-utility-url",
+  "version": "0.0.16",
+  "description": "The fastest url parser in the world.",
+  "homepage": "http://www.develop.cc",
+  "license": "BSD-2-Clause",
+  "author": {
+    "name": "zhangziqiu",
+    "email": "zhangziqiu@qq.com"
+  },
+  "maintainers": [
+    {
+      "name": "zhangziqiu",
+      "email": "zhangziqiu@qq.com"
+    }
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangziqiu/sojs-utility-url.git"
+  },
+  "main": "./src/module.js",
+  "dependencies": {
+    "sojs": "*"
+  },
+  "devDependencies": {
+    "sojs-test": "*",
+    "url-parse": "*"
+  }
+}

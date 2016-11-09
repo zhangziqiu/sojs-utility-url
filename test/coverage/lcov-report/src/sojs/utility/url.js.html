@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\sojs\utility\url.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src\sojs\utility\url.js</span></h1>
+    <h2>
+        Statements: <span class="metric">95.19% <small>(99 / 104)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">94.29% <small>(66 / 70)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(1 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">97.06% <small>(99 / 102)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">src/sojs/utility/</a> &#187; url.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">37</span>
+<span class="cline-any cline-yes">185</span>
+<span class="cline-any cline-yes">37</span>
+<span class="cline-any cline-yes">37</span>
+<span class="cline-any cline-yes">37</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-yes">386</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">386</span>
+<span class="cline-any cline-yes">28</span>
+<span class="cline-any cline-yes">28</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">358</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">351</span>
+<span class="cline-any cline-yes">78</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-yes">39</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-yes">30</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-yes">150</span>
+<span class="cline-any cline-yes">150</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">73</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">73</span>
+<span class="cline-any cline-yes">73</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">26</span>
+<span class="cline-any cline-yes">58</span>
+<span class="cline-any cline-yes">58</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">30</span>
+<span class="cline-any cline-yes">30</span>
+<span class="cline-any cline-yes">30</span>
+<span class="cline-any cline-yes">107</span>
+<span class="cline-any cline-yes">107</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">107</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">82</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/***
+ * the fastest url parser in the world.
+ * don't support ".com.cn" and so on.
+ *
+ * @author zhangziqiu&lt;zhangziqiu@qq.com&gt;
+ */
+&nbsp;
+sojs.define({
+    name: 'url',
+    namespace: 'sojs.utility',
+&nbsp;
+    /**
+     * 默认端口号
+     */
+    defaultPort: {
+        http: 80,
+        https: 443,
+        ftp: 21,
+        tftp: 69,
+        ssh: 22,
+        smtp: 25
+    },
+&nbsp;
+    /**
+     * 解析url, 返回urlObj.
+     * @param url {string} 待解析的url字符串
+     * @param {Object} ignoreOption 配置忽略扫描的部分.比如明确知道url上不包括端口,则可以忽略端口部分以便加快性能.
+     * @param {boolean} ignoreOption.protocol 忽略protocol部分
+     * @param {boolean} ignoreOption.host 忽略host部分
+     * @param {boolean} ignoreOption.port 忽略port部分
+     * @param {boolean} ignoreOption.path 忽略path部分
+     * @param {boolean} ignoreOption.extension 忽略extension部分
+     * @param {boolean} ignoreOption.query 忽略query部分
+     * @param {boolean} ignoreOption.anchor 忽略anchor部分
+     * @return {Object} urlObj 解析后的url对象
+     * @return {string} urlObj.origin 原始url, 比如: http://www.a.com:8080/b/c/d.html?e=1&amp;f=2#ggg
+     * @return {string} urlObj.protocol 协议, 比如: http
+     * @return {string} urlObj.host 域名, 比如: www.a.com
+     * @return {string} urlObj.port 端口号, 比如: 8080
+     * @return {Array}  urlObj.path 路径数组, 比如: [ 'b', 'c', 'd.html' ]
+     * @return {string} urlObj.extension 扩展名, 比如: html
+     * @return {Object} urlObj.query 包含了所有url参数的map对象, 比如: { e: '1', f: '2' }
+     * @return {string} urlObj.anchor 锚点, 比如: ggg
+     */
+    parse: function (url, ignoreOption) {
+        ignoreOption = ignoreOption || {};
+        var start = 0;
+        var end = url.length - 1;
+        var ch;
+        var result = {origin: url};
+&nbsp;
+        // Trim leading and trailing ws
+        while (url.charCodeAt(start) &lt;= 0x20 /*' '*/) <span class="cstat-no" title="statement not covered" >start++;</span>
+        while (url.charCodeAt(end) &lt;= 0x20 /*' '*/) <span class="cstat-no" title="statement not covered" >end--;</span>
+        var endLength = end + 1;
+&nbsp;
+        /*
+         ASCII:
+         0x20: (space)
+         0x23: '#'
+         0x26: '&amp;'
+         0x2E: '.'
+         0x2F: '/'
+         0x3A: ':'
+         0x3D: '='
+         0x3F: '?'
+         0x5E: '^'
+         */
+        // process protocol
+        if (!ignoreOption.protocol) {
+            for (var i = start; i &lt;= end; ++i) {
+                if (url.charCodeAt(i) === 0x3A) {
+                    result.protocol = url.slice(start, i);
+                    start = i + 3;
+                    break;
+                }
+            }
+        }
+&nbsp;
+        // process host
+        if (!ignoreOption.host) {
+            var pointArray = [];
+            for (var i = start; i &lt;= end; ++i) {
+                ch = url.charCodeAt(i);
+&nbsp;
+                if (ch === 0x2F) {
+                    ignoreOption.port = true;
+                    break;
+                }
+                else if (ch === 0x3A) {
+                    break;
+                }
+                else if (ch === 0x2E) {
+                    pointArray.push(i);
+                }
+            }
+            result.host = url.slice(start, i);
+            // get domain from host
+            if (pointArray.length &gt; 1) {
+                result.domain = url.slice(pointArray[pointArray.length - 2] + 1, i);
+            }
+            else {
+                result.domain = result.host;
+            }
+&nbsp;
+            start = i + 1;
+        }
+&nbsp;
+        // process port
+        if (!ignoreOption.port) {
+            for (var i = start; i &lt;= end; ++i) {
+                ch = url.charCodeAt(i);
+                if (ch === 0x2F) {
+                    break;
+                }
+            }
+            if (i &gt; start) {
+                result.port = url.slice(start, i);
+            }
+            start = i + 1;
+        }
+        // convert to int
+        if (result.port) {
+            result.port = parseInt(result.port, 10);
+        }
+        else if (result.protocol) {
+            // set default port
+            var defaultPort = this.defaultPort[result.protocol.toLowerCase()];
+            if(defaultPort){
+                result.port = defaultPort;
+            }
+        }
+&nbsp;
+        // process path
+        var pathArray = [];
+        if (!ignoreOption.path) {
+            var pathBreak = false;
+            for (var i = start; i &lt;= endLength; ++i) {
+                ch = url.charCodeAt(i);
+                if (i === endLength) {
+                    ch = 0x2E;
+                }
+                switch (ch) {
+                    case 0x23:
+                        ignoreOption.query = true;
+                    case 0x3F:
+                        ignoreOption.extension = true;
+                    case 0x2E:
+                        pathBreak = true;
+                    case 0x2F:
+                        if (i &gt; start) {
+                            pathArray.push(url.slice(start, i));
+                        }
+                        start = i + 1;
+                        break;
+                }
+&nbsp;
+                if (pathBreak) {
+                    break;
+                }
+            }
+        }
+        result.path = pathArray;
+&nbsp;
+        // process extension
+        if (!ignoreOption.extension) {
+            for (var i = start; i &lt;= end; ++i) {
+                ch = url.charCodeAt(i);
+                if (ch === 0x23) {
+                    ignoreOption.query = true;
+                    break;
+                }
+                else if (ch === 0x3F) {
+                    break;
+                }
+            }
+            if (i &gt; start) {
+                result.extension = url.slice(start, i);
+            }
+            start = i + 1;
+        }
+&nbsp;
+        // process query
+        var query = {};
+        if (!ignoreOption.query) {
+            var queryName = '';
+            var queryValue;
+            for (var i = start; i &lt;= endLength; ++i) {
+                ch = url.charCodeAt(i);
+                if (i === endLength) {
+                    ch = 0x23;
+                }
+&nbsp;
+                if (ch === 0x3D) {
+                    queryName = url.slice(start, i);
+                    start = i + 1;
+                }
+                else if (ch === 0x23 || ch === 0x26) {
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (queryName) {
+                        queryValue = url.slice(start, i);
+                        <span class="missing-if-branch" title="if path not taken" >I</span>if (query[queryName]) {
+<span class="cstat-no" title="statement not covered" >                            if (query[queryName].length) {</span>
+                                // query[queryName] 已经是一个数组了
+<span class="cstat-no" title="statement not covered" >                                query[queryName].push(queryValue);</span>
+                            }
+                            else {
+                                // 将 query[queryName] 转化为数组
+<span class="cstat-no" title="statement not covered" >                                query[queryName] = [query[queryName], queryValue];</span>
+                            }
+&nbsp;
+                        }
+                        else {
+                            query[queryName] = queryValue;
+                        }
+                        queryName = null;
+                    }
+                    start = i + 1;
+                    if (ch === 0x23) {
+                        break;
+                    }
+                }
+            }
+        }
+        result.query = query;
+&nbsp;
+        // process anchor
+        if (!ignoreOption.anchor) {
+            if (endLength &gt; start) {
+                result.anchor = url.slice(start, endLength);
+            }
+        }
+&nbsp;
+        return result;
+    }
+&nbsp;
+});</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Apr 21 2016 15:55:39 GMT+0800 (中国标准时间)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\Demo\Common\Model\NsHead.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">src\Demo\Common\Model\NsHead.js</span></h1>
+    <h2>
+        Statements: <span class="metric">74.58% <small>(44 / 59)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">61.11% <small>(11 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(3 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">74.58% <small>(44 / 59)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">src/Demo/Common/Model/</a> &#187; NsHead.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @file NsHead模型工具类.
+ * @author zhangziqiu@baidu.com
+ */
+/* global oojs */
+&nbsp;
+oojs.define({
+    name: 'NsHead',
+    namespace: 'Demo.Common.Model',
+    serviceEnum: {
+        templateService: 0,
+        templateBrowserService: 1
+    },
+&nbsp;
+    /**
+     * 从buffer中读取nsHead
+     *
+     * @param {Buffer} buffer buffer对象
+     * @return {Object} nsHead对象
+     */
+    readNsHead: function (buffer) {
+        var result = {};
+        result.id = buffer.readUInt16LE(0);
+        result.flags = buffer.readUInt16LE(2, 3);
+        result.logId = buffer.readUInt32LE(4, 7);
+        result.traceId = buffer.readDoubleLE(8, 15);
+        result.parentSpanId = buffer.readUInt32LE(16, 19);
+        result.spanId = buffer.readUInt32LE(20, 23);
+        result.magicNumber = buffer.readUInt32LE(24, 27);
+        result.methodId = buffer.readUInt32LE(28, 31);
+        result.bodyLength = buffer.readUInt32LE(32, 35);
+        result.snappy = result.flags &amp; 1;
+        return result;
+    },
+&nbsp;
+    /**
+     * 创建nsHead对象
+     *
+     * @param {Object} option 用于设置nsHead对象的各种参数
+     * @param {number} option.methodId 服务id
+     * @param {boolean} option.snappy 是否启用snappy压缩
+     * @param {number} option.bodyLength 数据包body部分的长度
+     * @return {Buffer} nsHead的Buffer对象
+     */
+    writeNsHead: function (option) {
+        var result = new Buffer(36);
+        var methodId = parseInt(typeof option.methodId !== 'undefined' ? option.methodId : <span class="branch-1 cbranch-no" title="branch not covered" >0,</span> 10);
+        var flags = option.snappy ? <span class="branch-0 cbranch-no" title="branch not covered" >0x01 </span>: 0x00;
+        result.writeUInt16LE(0x00, 0); // id
+        result.writeUInt16LE(flags, 2); // flags
+        result.writeUInt32LE(0, 4); // log id
+        result.writeDoubleLE(0, 8); // trace id
+        result.writeUInt32LE(0, 16); // parent span id
+        result.writeUInt32LE(0, 20); // span id
+        result.writeUInt32LE(0xfb709394, 24); // magic number
+        result.writeUInt32LE(methodId, 28); // method id
+        result.writeUInt32LE(option.bodyLength, 32); // body length
+        return result;
+    },
+&nbsp;
+    /**
+     * 长连接中nsHead多包的处理
+     *
+     * @param {Object} option  参数mapping对象
+     * @param {Object} option.data 网络包buffer对象
+     * @param {Object} option.socket  当前的socket对象
+     * @param {Object} option.processFunction  处理一次请求包的处理函数
+     */
+    processPackage: function (option) {
+        var data = option.data;
+        var socket = option.socket;
+        var processFunction = option.processFunction;
+&nbsp;
+        var dataBuffer;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (socket.preBuffer) {
+<span class="cstat-no" title="statement not covered" >            dataBuffer = Buffer.concat([</span>
+                socket.preBuffer,
+                data
+            ]);
+<span class="cstat-no" title="statement not covered" >            socket.preBuffer = null;</span>
+        }
+        else {
+            dataBuffer = data;
+        }
+&nbsp;
+        // 处理nsHead
+        var nsHead;
+        var nsHeadBuffer;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (dataBuffer.length &amp;&amp; dataBuffer.length &gt;= 36) {
+            nsHeadBuffer = dataBuffer.slice(0, 36);
+            nsHead = this.readNsHead(nsHeadBuffer);
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            socket.preBuffer = dataBuffer;</span>
+<span class="cstat-no" title="statement not covered" >            dataBuffer = null;</span>
+<span class="cstat-no" title="statement not covered" >            nsHeadBuffer = null;</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+        // 处理pb部分
+        var pbData = dataBuffer.slice(36);
+        var multiData = false;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (nsHead.magicNumber === 4218459028 &amp;&amp; pbData.length &gt;= nsHead.bodyLength) {
+            // 一次onData发送了多个业务包
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (pbData.length &gt; nsHead.bodyLength) {
+<span class="cstat-no" title="statement not covered" >                multiData = true;</span>
+            }
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            socket.preBuffer = dataBuffer;</span>
+<span class="cstat-no" title="statement not covered" >            dataBuffer = null;</span>
+<span class="cstat-no" title="statement not covered" >            nsHeadBuffer = null;</span>
+<span class="cstat-no" title="statement not covered" >            pbData = null;</span>
+<span class="cstat-no" title="statement not covered" >            nsHead = null;</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+        var msgData = pbData.slice(0, nsHead.bodyLength);
+        processFunction({
+            nsHead: nsHead,
+            bodyBuffer: msgData,
+            socket: socket
+        });
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (multiData) {
+<span class="cstat-no" title="statement not covered" >            var leftData = pbData.slice(nsHead.bodyLength);</span>
+<span class="cstat-no" title="statement not covered" >            this.processPackage({</span>
+                data: leftData,
+                socket: socket,
+                processFunction: processFunction
+            });
+        }
+&nbsp;
+    }
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 27 2015 13:10:40 GMT+0800 (中国标准时间)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>
